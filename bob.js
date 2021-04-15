@@ -20,7 +20,7 @@ class bob
     display()
     {
         var paperpos=this.body.position;
-        push(
+        push()
         translate(paperpos.x, paperpos.y);
         rectMode(CENTER)
         //strokeWeight(4);

@@ -5,6 +5,7 @@ const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 const Render = Matter.Render;
 const Constraint = Matter.Constraint;
+
 var bobObject1,bobObject2,bobObject3,bobObject4,bobObject5,roofObject;
 var rope1,rope2,rope3,rope4,rope5;
 var world;
@@ -52,34 +53,34 @@ rope3=new rope(bobObject3.body,roofObject.body,0,0)
 rope4=new rope(bobObject4.body,roofObject.body,-bobDiameter*1,0)
 rope5=new rope(bobObject5.body,roofObject.body,-bobDiameter*2,0)
 
-*constraint1={
+constraint1={
 bodyA:bobObject1.body,
 bodyB:roofObject.body,
 pointB: {x:-bobDiameter*2, y:0}
 }
 
-*constraint2={
+constraint2={
 bodyA:bobObject2.body,
 bodyB:roofObject.body,
 pointB: {x:-bobDiameter, y:0}
 }
 
 
-*constraint3={
+constraint3={
 bodyA:bobObject3.body,
 bodyB:roofObject.body,
 pointB: {x:0, y:0}
 
 }
 
-*constraint4={
+constraint4={
 bodyA:bobObject4.body,
 bodyB:roofObject.body,
 pointB: {x:bobDiameter, y:0}
 
 }
 
-*constraint5={
+constraint5={
 bodyA:bobObject1.body,
 bodyB:roofObject.body,
 pointB: {x:bobDiameter*2, y:0}
@@ -97,7 +98,6 @@ World.add(world, pendulum2);
 World.add(world, pendulum3);
 World.add(world, pendulum4);
 World.add(world, pendulum5);
-*/
 Engine.run(engine);
 //Render.run(render);
 
